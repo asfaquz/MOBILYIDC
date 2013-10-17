@@ -39,6 +39,7 @@ class SiteController extends Controller
         
         public function actionIndex()
         {
+            //This is actual url we are calling api
           //  http://channel.jdc.dev/ae-en/url_api_controller3.php?service=RegisterCustomer&params=%5Bfirstname%3Dtesst%5D%5Blastname%3Dtesst%5D%5Bemail%3Dsadfasd%40gmail.com%5D%5Bemail_confirmation%3Dsadfasd%40gmail.com%5D%5Bpseudonym%3Ddsah28732hekwiu%5D%5Bgender%3Dmale%5D%5Bpassword%3DdsjEY232Ujj%5D%5Bpassword_confirmation%3DdsjEY232Ujj%5D%5Bsubscribe_newsletters%3Dfalse%5D%5Baccept_terms_of_service%3Dtrue%5D%5Bcountry_iso_code%3Dsa%5D&result=xml&output=
             $this->pageTitle = 'Mobily';
 			$plan_types = ProductPackageType::model()->findAllByAttributes(array('customer_type' => 'b2c'));
