@@ -1,0 +1,368 @@
+body {
+	margin: 0;
+	padding: 0;
+	color: #555;
+	font: normal 10pt Arial, Helvetica, sans-serif;
+	background: #EFEFEF;
+}
+
+#page {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	background: white;
+	border: 1px solid #C9E0ED;
+}
+
+#header {
+	margin: 0;
+	padding: 0;
+	border-top: 3px solid #C9E0ED;
+}
+
+#content {
+	padding: 20px;
+}
+
+#sidebar {
+	padding: 20px 20px 20px 0;
+}
+
+#footer {
+	padding: 10px;
+	margin: 10px 20px;
+	font-size: 0.8em;
+	text-align: center;
+	border-top: 1px solid #C9E0ED;
+}
+
+#logo {
+	padding: 10px 20px;
+	font-size: 200%;
+}
+
+#mainmenu {
+	background: white url(bg.gif) repeat-x left top;
+}
+/*css modified on : 09-07-2013,Syed Asfaquz Zaman*/
+#mainmenu ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	height: 30px;
+}
+
+#mainmenu ul li {
+	display: block;
+	height: 28px;
+	float: left;
+	overflow: visible;
+}
+#mainmenu ul li:hover > ul {
+	display: block;
+	z-index: 999999999999999999;
+}
+
+#mainmenu ul li a {
+	float: left;
+	display: block;
+	color: #ffffff;
+	background-color: transparent;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 5px 8px;
+	height: 20px;
+}
+
+#mainmenu  ul li ul {
+	display: none;
+	position: absolute;
+	top: 70%;
+	background: white;
+	color: #000000 !important;
+	height: auto;
+	box-shadow: 0px 0px 6px 2px #666;
+	border-radius: 4px;
+	width: 200px;
+}
+#mainmenu  ul li ul li {
+	width: 200px;
+}
+
+#mainmenu  ul li ul li a {
+	color: #000000 !important;
+	padding: 4px 14px;
+	display: block;
+}
+
+#mainmenu  ul li ul li.active a {
+	background-color: #81B8D6;
+}
+#mainmenu  ul li ul li a:hover {
+	background-color: #81B8D6;
+	color: #FFFFFF !important;
+	width: 173px !important;
+}
+/*End of Css*/
+div.flash-error, div.flash-notice, div.flash-success {
+	padding: .8em;
+	margin-bottom: 1em;
+	border: 2px solid #ddd;
+}
+
+div.flash-error {
+	background: #FBE3E4;
+	color: #8a1f11;
+	border-color: #FBC2C4;
+}
+
+div.flash-notice {
+	background: #FFF6BF;
+	color: #514721;
+	border-color: #FFD324;
+}
+
+div.flash-success {
+	background: #E6EFC2;
+	color: #264409;
+	border-color: #C6D880;
+}
+
+div.flash-error a {
+	color: #8a1f11;
+}
+
+div.flash-notice a {
+	color: #514721;
+}
+
+div.flash-success a {
+	color: #264409;
+}
+
+div.form .rememberMe label {
+	display: inline;
+}
+
+div.view {
+	padding: 10px;
+	margin: 10px 0;
+	border: 1px solid #C9E0ED;
+}
+
+div.breadcrumbs {
+	font-size: 0.9em;
+	padding: 5px 20px;
+}
+
+div.breadcrumbs span {
+	font-weight: bold;
+}
+
+div.search-form {
+	padding: 10px;
+	margin: 10px 0;
+	background: #eee;
+}
+
+.portlet {
+
+}
+
+.portlet-decoration {
+	padding: 3px 8px;
+	background: #B7D6E7;
+	border-left: 5px solid #6FACCF;
+}
+
+.portlet-title {
+	font-size: 12px;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+	color: #298dcd;
+}
+
+.portlet-content {
+	font-size: 0.9em;
+	margin: 0 0 15px 0;
+	padding: 5px 8px;
+	background: #EFFDFF;
+}
+
+.portlet-content ul {
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.portlet-content li {
+	padding: 2px 0 4px 0px;
+}
+
+.operations {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.operations li {
+	padding-bottom: 2px;
+}
+
+.operations li a {
+	font: bold 12px Arial;
+	color: #0066A4;
+	display: block;
+	padding: 2px 0 2px 8px;
+	line-height: 15px;
+	text-decoration: none;
+}
+
+.operations li a:visited {
+	color: #0066A4;
+}
+
+.operations li a:hover {
+	background: #80CFFF;
+}
+
+/*css added on : 09-07-2013,Syed Asfaquz Zaman*/
+.portlet .portlet-content .operations #itemProduct ul {
+	display: none;
+	border-top: 2px dotted #DDDDDD;
+	border-bottom: 2px dotted #DDDDDD;
+	padding-left: 5px;
+}
+.portlet .portlet-content .operations #itemProduct #menuProduct {
+	cursor: pointer;
+	font: bold 12px Arial;
+	color: #0066A4;
+	display: block;
+	padding: 2px 0 2px 8px;
+	line-height: 15px;
+	text-decoration: none;
+}
+.portlet .portlet-content .operations #itemProduct ul li a {
+	font: 12px Arial !important;
+}
+
+#pselect-row fieldset {
+	width: 500px;
+	float: left;
+	position: relative;
+	margin-bottom: 20px !important;
+	border: 3px solid #ccc;
+	z-index: 9001;
+}
+#pselect-row fieldset a {
+	text-decoration: none;
+}
+#pselect-row fieldset .fieldset_close {
+	position: absolute;
+	top: -2px;
+	right: -15px;
+	background-color: #000;pselect-row
+	color: #fff;
+	padding: 0px 5px 3px 5px;
+	border: 2px solid #ccc;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-khtml-border-radius: 20px;
+	-moz-box-shadow: 0 1px 5px #333;
+	-webkit-box-shadow: 0 1px 2px #333;
+	z-index: 9002;
+	opacity: 0.65;
+	cursor: pointer;
+}
+
+#pselect-row fieldset .fieldset_close:before {
+	content: "x";
+}
+#removeFieldset {
+	display: none
+}
+.highlighted {
+	opacity: 0.65;
+	border: 1px solid #CC0000;
+	z-index: 9003;
+}
+.sortError {
+	position: absolute;
+	z-index: 9004;
+	top: 131px;
+	left: 150px;
+	width: 280px;
+	border: 1px solid #D8D8D8;
+	border-radius: 5px;
+	background-color: rgb(255, 249, 242);
+	color: rgb(211, 0, 0);
+	font-family: Arial;
+	font-size: 11px;
+	padding: 5px;
+}
+
+.inputError {
+
+	background: #ee0101;
+	color: #fff;
+	width: 170px;
+	font-family: tahoma;
+	font-size: 11px;
+	border: 2px solid #ddd;
+	box-shadow: 0px 0px 6px #000;
+	-moz-box-shadow: 0px 0px 6px #000;
+	-webkit-box-shadow: 0px 0px 6px #000;
+	padding: 4px 13px 7px 10px;
+	border-radius: 6px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	z-index: 9005;
+	float: right;
+	position: absolute;
+	margin-top: -61px;
+	margin-left: 100px;
+}
+
+/*RAMESH ADDED for Pricing style changes*/
+#product_priceoptionsdisplay fieldset {
+	width: 500px;
+	float: left;
+	position: relative;
+	margin-bottom: 20px !important;
+	border: 3px solid #ccc;
+	z-index: 9001;
+}
+#product_priceoptionsdisplay fieldset a {
+	text-decoration: none;
+}
+#product_priceoptionsdisplay fieldset .fieldset_close {
+	position: absolute;
+	top: -2px;
+	right: -15px;
+	background-color: #000;
+	color: #fff;
+	padding: 0px 5px 3px 5px;
+	border: 2px solid #ccc;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-khtml-border-radius: 20px;
+	-moz-box-shadow: 0 1px 5px #333;
+	-webkit-box-shadow: 0 1px 2px #333;
+	z-index: 9002;
+	opacity: 0.65;
+	cursor: pointer;
+}
+
+#product_priceoptionsdisplay fieldset .fieldset_close:before {
+	content: "x";
+}
+#removepriceFieldset {
+	display: none
+}
+
+/*End of css*/
+

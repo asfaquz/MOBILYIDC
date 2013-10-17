@@ -36,6 +36,24 @@ class SiteController extends Controller
 	        	$this->render('error', $error);
 	    }
 	}
+        
+        public function actionIndex()
+        {
+          //  http://channel.jdc.dev/ae-en/url_api_controller3.php?service=RegisterCustomer&params=%5Bfirstname%3Dtesst%5D%5Blastname%3Dtesst%5D%5Bemail%3Dsadfasd%40gmail.com%5D%5Bemail_confirmation%3Dsadfasd%40gmail.com%5D%5Bpseudonym%3Ddsah28732hekwiu%5D%5Bgender%3Dmale%5D%5Bpassword%3DdsjEY232Ujj%5D%5Bpassword_confirmation%3DdsjEY232Ujj%5D%5Bsubscribe_newsletters%3Dfalse%5D%5Baccept_terms_of_service%3Dtrue%5D%5Bcountry_iso_code%3Dsa%5D&result=xml&output=
+            $this->pageTitle = 'Mobily';
+			$plan_types = ProductPackageType::model()->findAllByAttributes(array('customer_type' => 'b2c'));
+			$plans = ProductPackage::model()->findAllByAttributes(array('customer_type' => 'b2c'));
+			$devices = ProductDevice::model()->findAllByAttributes(array(
+				'cash_sale_allowed' => 1,
+				'customer_type' => 'b2c'
+					));
+			$this->render('index', array(
+				"plans" => $plans,
+				'devices' => $devices,
+				'plan_types' => $plan_types
+			));
+           // echo "Welcome to Mobily IDC";
+        }
 
 	/**
 	 * Displays the contact page
@@ -60,30 +78,21 @@ class SiteController extends Controller
 	/**
 	 * Displays the login page
 	 */
-	public function actionLogin()
-	{
-		if (!defined('CRYPT_BLOWFISH')||!CRYPT_BLOWFISH)
-			throw new CHttpException(500,"This application requires that PHP was compiled with Blowfish support for crypt().");
-
-		$model=new LoginForm;
-
-		// if it is ajax validation request
-		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
-		{
+	public function actionLogin() {
+		$model = new LoginForm;
+		if (isset($_POST['ajax']) && $_POST['ajax'] === 'login-form') {
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
-
-		// collect user input data
-		if(isset($_POST['LoginForm']))
-		{
-			$model->attributes=$_POST['LoginForm'];
-			// validate user input and redirect to the previous page if valid
-			if($model->validate() && $model->login())
-				$this->redirect(Yii::app()->user->returnUrl);
+		if (isset($_POST['LoginForm'])) {
+			$model->attributes = $_POST['LoginForm'];
+			if ($model->validate() && $model->login()) {
+				if (Yii::app()->user->name == 'admin') {
+					$this->redirect(array('/backoffice'));
+				}
+			}
 		}
-		// display the login form
-		$this->render('login',array('model'=>$model));
+		$this->render('login', array('model' => $model));
 	}
 
 	/**
