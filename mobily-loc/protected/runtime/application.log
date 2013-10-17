@@ -227,3 +227,305 @@ Stack trace:
 REQUEST_URI=/index.php/site/page?view=about
 HTTP_REFERER=http://www.idc-mobily.com/index.php/post/index
 ---
+2013/10/15 12:08:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php:483
+Stack trace:
+#0 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php(270): CController->missingAction('')
+#1 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(282): CController->run('')
+#2 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#3 /home/souq-manayata/workspace/MOBILYIDC/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/souq-manayata/workspace/MOBILYIDC/mobily-loc/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/
+---
+2013/10/15 12:09:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php:483
+Stack trace:
+#0 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php(270): CController->missingAction('')
+#1 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(282): CController->run('')
+#2 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#3 /home/souq-manayata/workspace/MOBILYIDC/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/souq-manayata/workspace/MOBILYIDC/mobily-loc/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/
+---
+2013/10/15 12:09:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php:483
+Stack trace:
+#0 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php(270): CController->missingAction('')
+#1 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(282): CController->run('')
+#2 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#3 /home/souq-manayata/workspace/MOBILYIDC/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/souq-manayata/workspace/MOBILYIDC/mobily-loc/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/
+---
+2013/10/15 12:09:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php:483
+Stack trace:
+#0 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php(270): CController->missingAction('')
+#1 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(282): CController->run('')
+#2 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#3 /home/souq-manayata/workspace/MOBILYIDC/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/souq-manayata/workspace/MOBILYIDC/mobily-loc/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/
+---
+2013/10/15 12:09:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php:483
+Stack trace:
+#0 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php(270): CController->missingAction('')
+#1 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(282): CController->run('')
+#2 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#3 /home/souq-manayata/workspace/MOBILYIDC/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/souq-manayata/workspace/MOBILYIDC/mobily-loc/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/
+---
+2013/10/15 12:09:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php:483
+Stack trace:
+#0 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php(270): CController->missingAction('')
+#1 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(282): CController->run('')
+#2 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#3 /home/souq-manayata/workspace/MOBILYIDC/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/souq-manayata/workspace/MOBILYIDC/mobily-loc/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/
+---
+2013/10/15 12:09:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php:483
+Stack trace:
+#0 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php(270): CController->missingAction('')
+#1 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(282): CController->run('')
+#2 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#3 /home/souq-manayata/workspace/MOBILYIDC/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/souq-manayata/workspace/MOBILYIDC/mobily-loc/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/
+---
+2013/10/15 12:09:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php:483
+Stack trace:
+#0 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php(270): CController->missingAction('')
+#1 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(282): CController->run('')
+#2 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#3 /home/souq-manayata/workspace/MOBILYIDC/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/souq-manayata/workspace/MOBILYIDC/mobily-loc/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/
+---
+2013/10/15 12:09:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php:483
+Stack trace:
+#0 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php(270): CController->missingAction('')
+#1 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(282): CController->run('')
+#2 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#3 /home/souq-manayata/workspace/MOBILYIDC/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/souq-manayata/workspace/MOBILYIDC/mobily-loc/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/
+---
+2013/10/15 12:09:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php:483
+Stack trace:
+#0 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php(270): CController->missingAction('')
+#1 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(282): CController->run('')
+#2 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#3 /home/souq-manayata/workspace/MOBILYIDC/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/souq-manayata/workspace/MOBILYIDC/mobily-loc/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/
+---
+2013/10/15 12:09:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php:483
+Stack trace:
+#0 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php(270): CController->missingAction('')
+#1 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(282): CController->run('')
+#2 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#3 /home/souq-manayata/workspace/MOBILYIDC/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/souq-manayata/workspace/MOBILYIDC/mobily-loc/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/
+---
+2013/10/15 12:09:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php:483
+Stack trace:
+#0 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php(270): CController->missingAction('')
+#1 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(282): CController->run('')
+#2 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#3 /home/souq-manayata/workspace/MOBILYIDC/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/souq-manayata/workspace/MOBILYIDC/mobily-loc/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/
+---
+2013/10/15 12:09:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php:483
+Stack trace:
+#0 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php(270): CController->missingAction('')
+#1 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(282): CController->run('')
+#2 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#3 /home/souq-manayata/workspace/MOBILYIDC/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/souq-manayata/workspace/MOBILYIDC/mobily-loc/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/
+---
+2013/10/15 12:09:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php:483
+Stack trace:
+#0 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php(270): CController->missingAction('')
+#1 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(282): CController->run('')
+#2 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#3 /home/souq-manayata/workspace/MOBILYIDC/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/souq-manayata/workspace/MOBILYIDC/mobily-loc/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/
+---
+2013/10/15 12:09:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php:483
+Stack trace:
+#0 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php(270): CController->missingAction('')
+#1 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(282): CController->run('')
+#2 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#3 /home/souq-manayata/workspace/MOBILYIDC/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/souq-manayata/workspace/MOBILYIDC/mobily-loc/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/
+---
+2013/10/15 12:09:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php:483
+Stack trace:
+#0 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php(270): CController->missingAction('')
+#1 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(282): CController->run('')
+#2 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#3 /home/souq-manayata/workspace/MOBILYIDC/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/souq-manayata/workspace/MOBILYIDC/mobily-loc/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/
+---
+2013/10/15 12:09:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php:483
+Stack trace:
+#0 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php(270): CController->missingAction('')
+#1 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(282): CController->run('')
+#2 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#3 /home/souq-manayata/workspace/MOBILYIDC/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/souq-manayata/workspace/MOBILYIDC/mobily-loc/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/
+---
+2013/10/15 12:09:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php:483
+Stack trace:
+#0 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php(270): CController->missingAction('')
+#1 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(282): CController->run('')
+#2 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#3 /home/souq-manayata/workspace/MOBILYIDC/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/souq-manayata/workspace/MOBILYIDC/mobily-loc/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/
+---
+2013/10/15 12:09:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php:483
+Stack trace:
+#0 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php(270): CController->missingAction('')
+#1 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(282): CController->run('')
+#2 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#3 /home/souq-manayata/workspace/MOBILYIDC/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/souq-manayata/workspace/MOBILYIDC/mobily-loc/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/
+---
+2013/10/15 12:09:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php:483
+Stack trace:
+#0 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php(270): CController->missingAction('')
+#1 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(282): CController->run('')
+#2 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#3 /home/souq-manayata/workspace/MOBILYIDC/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/souq-manayata/workspace/MOBILYIDC/mobily-loc/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/
+---
+2013/10/15 12:09:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php:483
+Stack trace:
+#0 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php(270): CController->missingAction('')
+#1 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(282): CController->run('')
+#2 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#3 /home/souq-manayata/workspace/MOBILYIDC/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/souq-manayata/workspace/MOBILYIDC/mobily-loc/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/
+---
+2013/10/15 12:09:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php:483
+Stack trace:
+#0 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php(270): CController->missingAction('')
+#1 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(282): CController->run('')
+#2 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#3 /home/souq-manayata/workspace/MOBILYIDC/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/souq-manayata/workspace/MOBILYIDC/mobily-loc/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/
+---
+2013/10/15 12:09:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php:483
+Stack trace:
+#0 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php(270): CController->missingAction('')
+#1 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(282): CController->run('')
+#2 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#3 /home/souq-manayata/workspace/MOBILYIDC/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/souq-manayata/workspace/MOBILYIDC/mobily-loc/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/
+---
+2013/10/15 12:09:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php:483
+Stack trace:
+#0 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php(270): CController->missingAction('')
+#1 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(282): CController->run('')
+#2 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#3 /home/souq-manayata/workspace/MOBILYIDC/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/souq-manayata/workspace/MOBILYIDC/mobily-loc/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/
+---
+2013/10/15 12:09:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php:483
+Stack trace:
+#0 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php(270): CController->missingAction('')
+#1 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(282): CController->run('')
+#2 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#3 /home/souq-manayata/workspace/MOBILYIDC/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/souq-manayata/workspace/MOBILYIDC/mobily-loc/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/
+---
+2013/10/15 12:09:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php:483
+Stack trace:
+#0 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php(270): CController->missingAction('')
+#1 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(282): CController->run('')
+#2 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#3 /home/souq-manayata/workspace/MOBILYIDC/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/souq-manayata/workspace/MOBILYIDC/mobily-loc/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/
+---
+2013/10/15 12:09:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php:483
+Stack trace:
+#0 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php(270): CController->missingAction('')
+#1 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(282): CController->run('')
+#2 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#3 /home/souq-manayata/workspace/MOBILYIDC/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/souq-manayata/workspace/MOBILYIDC/mobily-loc/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/
+---
+2013/10/15 12:09:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php:483
+Stack trace:
+#0 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php(270): CController->missingAction('')
+#1 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(282): CController->run('')
+#2 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#3 /home/souq-manayata/workspace/MOBILYIDC/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/souq-manayata/workspace/MOBILYIDC/mobily-loc/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/
+---
+2013/10/15 12:09:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php:483
+Stack trace:
+#0 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php(270): CController->missingAction('')
+#1 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(282): CController->run('')
+#2 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#3 /home/souq-manayata/workspace/MOBILYIDC/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/souq-manayata/workspace/MOBILYIDC/mobily-loc/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/
+---
+2013/10/15 12:15:56 [error] [php] include(ProductPackageType.php): failed to open stream: No such file or directory (/home/souq-manayata/workspace/MOBILYIDC/framework/YiiBase.php:427)
+Stack trace:
+#0 /home/souq-manayata/workspace/MOBILYIDC/mobily-loc/protected/controllers/SiteController.php(30): spl_autoload_call()
+#1 /home/souq-manayata/workspace/MOBILYIDC/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#2 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php(286): SiteController->runAction()
+#4 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#5 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(282): SiteController->run()
+#6 /home/souq-manayata/workspace/MOBILYIDC/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /home/souq-manayata/workspace/MOBILYIDC/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#8 /home/souq-manayata/workspace/MOBILYIDC/mobily-loc/index.php(15): CWebApplication->run()
+REQUEST_URI=/
