@@ -7,6 +7,7 @@
  * @property integer $product_bundle_device_id
  * @property integer $product_refno
  * @property integer $device_group
+ * 
  */
 class ProductBundleDevice extends CActiveRecord
 {

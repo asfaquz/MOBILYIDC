@@ -18,6 +18,7 @@
  * @property string $name_en
  * @property string $name_ar
  * @property integer $enabled
+ * ddd
  */
 class ProductDevice extends CActiveRecord
 {

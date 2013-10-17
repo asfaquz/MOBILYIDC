@@ -21,6 +21,7 @@
  * @property integer $optional_addon_group
  * @property string $vanity
  * @property integer $enabled
+ * fdf
  */
 class Product extends CActiveRecord
 {

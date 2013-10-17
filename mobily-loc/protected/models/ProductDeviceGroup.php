@@ -6,6 +6,7 @@
  * The followings are the available columns in table 'product_device_group':
  * @property integer $product_device_group_id
  * @property string $group_name
+ * ddddd
  */
 class ProductDeviceGroup extends CActiveRecord
 {

@@ -15,6 +15,7 @@
  * @property double $price
  * @property integer $sort
  * @property integer $enabled
+ * 
  */
 class ProductAddonValue extends CActiveRecord
 {

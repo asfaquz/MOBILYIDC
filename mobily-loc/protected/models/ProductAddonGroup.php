@@ -6,6 +6,7 @@
  * The followings are the available columns in table 'product_addon_group':
  * @property integer $product_addon_group_id
  * @property string $group_name
+ * 
  */
 class ProductAddonGroup extends CActiveRecord
 {

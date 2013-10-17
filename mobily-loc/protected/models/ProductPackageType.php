@@ -9,6 +9,7 @@
  * @property string $customer_type
  * @property string $name_en
  * @property string $name_ar
+ * sss
  */
 class ProductPackageType extends CActiveRecord
 {

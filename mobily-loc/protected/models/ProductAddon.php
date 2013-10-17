@@ -12,6 +12,7 @@
  * @property string $name_en
  * @property string $name_ar
  * @property integer $enabled
+ * cdd
  */
 class ProductAddon extends CActiveRecord
 {

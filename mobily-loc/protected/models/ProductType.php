@@ -7,6 +7,7 @@
  * @property integer $product_type_id
  * @property string $product_type
  * @property string $function_name
+ * ddddd
  */
 class ProductType extends CActiveRecord
 {

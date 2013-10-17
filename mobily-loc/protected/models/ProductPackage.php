@@ -16,6 +16,7 @@
  * @property string $desc_en
  * @property string $desc_ar
  * @property integer $enabled
+ * dddd
  */
 class ProductPackage extends CActiveRecord
 {
