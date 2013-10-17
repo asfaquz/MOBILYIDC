@@ -1,21 +1,19 @@
 <?php
 
 /**
- * This is the model class for table "product_package_type".
+ * This is the model class for table "customer_services".
  *
- * The followings are the available columns in table 'product_package_type':
- * @property integer $product_package_type_id
- * @property string $package_type_name
- * @property string $customer_type
- * @property string $name_en
- * @property string $name_ar
+ * The followings are the available columns in table 'customer_services':
+ * @property integer $user_id
+ * @property integer $prospect_status
+ * @property string $prospect_msg
  */
-class ProductPackageType extends CActiveRecord
+class CustomerServices extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return ProductPackageType the static model class
+	 * @return CustomerServices the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -27,7 +25,7 @@ class ProductPackageType extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'product_package_type';
+		return 'customer_services';
 	}
 
 	/**
@@ -38,12 +36,12 @@ class ProductPackageType extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('product_package_type_id, package_type_name, customer_type, name_en, name_ar', 'required'),
-			array('product_package_type_id', 'numerical', 'integerOnly'=>true),
-			array('package_type_name', 'length', 'max'=>150),
+			array('user_id', 'required'),
+			array('user_id, prospect_status', 'numerical', 'integerOnly'=>true),
+			array('prospect_msg', 'length', 'max'=>150),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('product_package_type_id, package_type_name, customer_type, name_en, name_ar', 'safe', 'on'=>'search'),
+			array('user_id, prospect_status, prospect_msg', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -64,11 +62,9 @@ class ProductPackageType extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'product_package_type_id' => 'Product Package Type',
-			'package_type_name' => 'Package Type Name',
-			'customer_type' => 'Customer Type',
-			'name_en' => 'Name EN',
-			'name_ar' => 'Name AR',
+			'user_id' => 'User',
+			'prospect_status' => 'Prospect Status',
+			'prospect_msg' => 'Prospect Msg',
 		);
 	}
 
@@ -83,10 +79,9 @@ class ProductPackageType extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('product_package_type_id',$this->product_package_type_id);
-		$criteria->compare('package_type_name',$this->package_type_name,true);
-		$criteria->compare('name_en',$this->name_en,true);
-		$criteria->compare('name_ar',$this->name_ar,true);
+		$criteria->compare('user_id',$this->user_id);
+		$criteria->compare('prospect_status',$this->prospect_status);
+		$criteria->compare('prospect_msg',$this->prospect_msg,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

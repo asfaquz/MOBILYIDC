@@ -1,21 +1,19 @@
 <?php
 
 /**
- * This is the model class for table "product_package_type".
+ * This is the model class for table "product_bundle_device".
  *
- * The followings are the available columns in table 'product_package_type':
- * @property integer $product_package_type_id
- * @property string $package_type_name
- * @property string $customer_type
- * @property string $name_en
- * @property string $name_ar
+ * The followings are the available columns in table 'product_bundle_device':
+ * @property integer $product_bundle_device_id
+ * @property integer $product_refno
+ * @property integer $device_group
  */
-class ProductPackageType extends CActiveRecord
+class ProductBundleDevice extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return ProductPackageType the static model class
+	 * @return ProductBundleDevice the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -27,7 +25,7 @@ class ProductPackageType extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'product_package_type';
+		return 'product_bundle_device';
 	}
 
 	/**
@@ -38,12 +36,11 @@ class ProductPackageType extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('product_package_type_id, package_type_name, customer_type, name_en, name_ar', 'required'),
-			array('product_package_type_id', 'numerical', 'integerOnly'=>true),
-			array('package_type_name', 'length', 'max'=>150),
+			array('product_refno, device_group', 'required'),
+			array('product_refno, device_group', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('product_package_type_id, package_type_name, customer_type, name_en, name_ar', 'safe', 'on'=>'search'),
+			array('product_bundle_device_id, product_refno, device_group', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -64,11 +61,9 @@ class ProductPackageType extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'product_package_type_id' => 'Product Package Type',
-			'package_type_name' => 'Package Type Name',
-			'customer_type' => 'Customer Type',
-			'name_en' => 'Name EN',
-			'name_ar' => 'Name AR',
+			'product_bundle_device_id' => 'Product Bundle Device ID',
+			'product_refno' => 'Product Refno',
+			'device_group' => 'Device Group',
 		);
 	}
 
@@ -83,13 +78,16 @@ class ProductPackageType extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('product_package_type_id',$this->product_package_type_id);
-		$criteria->compare('package_type_name',$this->package_type_name,true);
-		$criteria->compare('name_en',$this->name_en,true);
-		$criteria->compare('name_ar',$this->name_ar,true);
+		$criteria->compare('product_bundle_device_id',$this->product_bundle_device_id);
+		$criteria->compare('product_refno',$this->product_refno);
+		$criteria->compare('device_group',$this->device_group);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
+	}
+	public static function removeBundleDeviceIds($id) {
+		$ids_arr = Yii::app()->db->createCommand()
+				->delete('product_bundle_device','product_refno=:product_refno', array(':product_refno'=>$id));
 	}
 }

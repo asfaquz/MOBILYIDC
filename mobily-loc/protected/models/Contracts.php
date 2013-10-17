@@ -1,21 +1,18 @@
 <?php
 
 /**
- * This is the model class for table "product_package_type".
+ * This is the model class for table "contracts".
  *
- * The followings are the available columns in table 'product_package_type':
- * @property integer $product_package_type_id
- * @property string $package_type_name
- * @property string $customer_type
- * @property string $name_en
- * @property string $name_ar
+ * The followings are the available columns in table 'contracts':
+ * @property integer $id_contract
+ * @property string $name
  */
-class ProductPackageType extends CActiveRecord
+class Contracts extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return ProductPackageType the static model class
+	 * @return Contracts the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -27,7 +24,7 @@ class ProductPackageType extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'product_package_type';
+		return 'contracts';
 	}
 
 	/**
@@ -38,12 +35,10 @@ class ProductPackageType extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('product_package_type_id, package_type_name, customer_type, name_en, name_ar', 'required'),
-			array('product_package_type_id', 'numerical', 'integerOnly'=>true),
-			array('package_type_name', 'length', 'max'=>150),
+			array('name', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('product_package_type_id, package_type_name, customer_type, name_en, name_ar', 'safe', 'on'=>'search'),
+			array('id_contract, name', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -64,11 +59,8 @@ class ProductPackageType extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'product_package_type_id' => 'Product Package Type',
-			'package_type_name' => 'Package Type Name',
-			'customer_type' => 'Customer Type',
-			'name_en' => 'Name EN',
-			'name_ar' => 'Name AR',
+			'id_contract' => 'Id Contract',
+			'name' => 'Name',
 		);
 	}
 
@@ -83,10 +75,8 @@ class ProductPackageType extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('product_package_type_id',$this->product_package_type_id);
-		$criteria->compare('package_type_name',$this->package_type_name,true);
-		$criteria->compare('name_en',$this->name_en,true);
-		$criteria->compare('name_ar',$this->name_ar,true);
+		$criteria->compare('id_contract',$this->id_contract);
+		$criteria->compare('name',$this->name,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

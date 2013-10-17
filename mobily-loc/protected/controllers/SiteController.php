@@ -30,9 +30,11 @@ class SiteController extends Controller {
             'cash_sale_allowed' => 1,
             'customer_type' => 'b2c'
         ));
-       
-        echo '<pre>';
-        print_r($devices);
+       $this->render('index', array(
+				"plans" => $plans,
+				'devices' => $devices,
+				'plan_types' => $plan_types
+			));
     }
 
     /**

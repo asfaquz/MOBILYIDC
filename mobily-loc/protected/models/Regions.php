@@ -1,21 +1,23 @@
 <?php
 
 /**
- * This is the model class for table "product_package_type".
+ * This is the model class for table "regions".
  *
- * The followings are the available columns in table 'product_package_type':
- * @property integer $product_package_type_id
- * @property string $package_type_name
- * @property string $customer_type
- * @property string $name_en
- * @property string $name_ar
+ * The followings are the available columns in table 'regions':
+ * @property integer $id_region
+ * @property integer $id_city
+ * @property integer $priority
+ *
+ * The followings are the available model relations:
+ * @property Cities $idCity
+ * @property Language[] $languages
  */
-class ProductPackageType extends CActiveRecord
+class Regions extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return ProductPackageType the static model class
+	 * @return Regions the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -27,7 +29,7 @@ class ProductPackageType extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'product_package_type';
+		return 'regions';
 	}
 
 	/**
@@ -38,12 +40,10 @@ class ProductPackageType extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('product_package_type_id, package_type_name, customer_type, name_en, name_ar', 'required'),
-			array('product_package_type_id', 'numerical', 'integerOnly'=>true),
-			array('package_type_name', 'length', 'max'=>150),
+			array('id_city, priority', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('product_package_type_id, package_type_name, customer_type, name_en, name_ar', 'safe', 'on'=>'search'),
+			array('id_region, id_city, priority', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -55,6 +55,9 @@ class ProductPackageType extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'idCity' => array(self::BELONGS_TO, 'Cities', 'id_city'),
+			'languages' => array(self::MANY_MANY, 'Language', 'regions_labels(id_region, language_id)'),
+			'labels' => array(self::HAS_MANY, 'RegionsLabels', 'id_region'),
 		);
 	}
 
@@ -64,11 +67,9 @@ class ProductPackageType extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'product_package_type_id' => 'Product Package Type',
-			'package_type_name' => 'Package Type Name',
-			'customer_type' => 'Customer Type',
-			'name_en' => 'Name EN',
-			'name_ar' => 'Name AR',
+			'id_region' => 'Id Region',
+			'id_city' => 'Id City',
+			'priority' => 'Priority',
 		);
 	}
 
@@ -83,10 +84,9 @@ class ProductPackageType extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('product_package_type_id',$this->product_package_type_id);
-		$criteria->compare('package_type_name',$this->package_type_name,true);
-		$criteria->compare('name_en',$this->name_en,true);
-		$criteria->compare('name_ar',$this->name_ar,true);
+		$criteria->compare('id_region',$this->id_region);
+		$criteria->compare('id_city',$this->id_city);
+		$criteria->compare('priority',$this->priority);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

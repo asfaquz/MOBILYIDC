@@ -1,21 +1,19 @@
 <?php
 
 /**
- * This is the model class for table "product_package_type".
+ * This is the model class for table "product_type".
  *
- * The followings are the available columns in table 'product_package_type':
- * @property integer $product_package_type_id
- * @property string $package_type_name
- * @property string $customer_type
- * @property string $name_en
- * @property string $name_ar
+ * The followings are the available columns in table 'product_type':
+ * @property integer $product_type_id
+ * @property string $product_type
+ * @property string $function_name
  */
-class ProductPackageType extends CActiveRecord
+class ProductType extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return ProductPackageType the static model class
+	 * @return ProductType the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -27,7 +25,7 @@ class ProductPackageType extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'product_package_type';
+		return 'product_type';
 	}
 
 	/**
@@ -38,12 +36,11 @@ class ProductPackageType extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('product_package_type_id, package_type_name, customer_type, name_en, name_ar', 'required'),
-			array('product_package_type_id', 'numerical', 'integerOnly'=>true),
-			array('package_type_name', 'length', 'max'=>150),
+			array('product_type, function_name', 'required'),
+			array('product_type, function_name', 'length', 'max'=>250),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('product_package_type_id, package_type_name, customer_type, name_en, name_ar', 'safe', 'on'=>'search'),
+			array('product_type_id, product_type, function_name', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -55,6 +52,7 @@ class ProductPackageType extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+                    'products' => array(self::HAS_MANY, 'Product', 'product_type')
 		);
 	}
 
@@ -64,11 +62,9 @@ class ProductPackageType extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'product_package_type_id' => 'Product Package Type',
-			'package_type_name' => 'Package Type Name',
-			'customer_type' => 'Customer Type',
-			'name_en' => 'Name EN',
-			'name_ar' => 'Name AR',
+			'product_type_id' => 'Product Type ID',
+			'product_type' => 'Product Type',
+			'function_name' => 'Function Name',
 		);
 	}
 
@@ -83,10 +79,9 @@ class ProductPackageType extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('product_package_type_id',$this->product_package_type_id);
-		$criteria->compare('package_type_name',$this->package_type_name,true);
-		$criteria->compare('name_en',$this->name_en,true);
-		$criteria->compare('name_ar',$this->name_ar,true);
+		$criteria->compare('product_type_id',$this->product_type_id);
+		$criteria->compare('product_type',$this->product_type,true);
+		$criteria->compare('function_name',$this->function_name,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

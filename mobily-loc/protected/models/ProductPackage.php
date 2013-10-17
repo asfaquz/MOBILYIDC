@@ -6,123 +6,105 @@
  * The followings are the available columns in table 'product_package':
  * @property integer $product_package_id
  * @property string $package_name
- * @property integer $speed_based
+ * @property string $speed_based
  * @property string $package_type
- * @property string $customer_type
  * @property string $img
  * @property integer $package_type_id
  * @property string $name_en
  * @property string $name_ar
  * @property string $desc_en
  * @property string $desc_ar
- * @property integer $enabled
+ * @property string $enabled
  */
-class ProductPackage extends CActiveRecord
-{
+class ProductPackage extends CActiveRecord {
+
+	/**
+	 * Returns the static model of the specified AR class.
+	 * @param string $className active record class name.
+	 * @return ProductPackage the static model class
+	 */
+	public static function model($className = __CLASS__) {
+		return parent::model($className);
+	}
+
 	/**
 	 * @return string the associated database table name
 	 */
-	public function tableName()
-	{
+	public function tableName() {
 		return 'product_package';
 	}
 
 	/**
 	 * @return array validation rules for model attributes.
 	 */
-	public function rules()
-	{
+	public function rules() {
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('package_name, package_type, customer_type, name_en, name_ar', 'required'),
-			array('speed_based, package_type_id, enabled', 'numerical', 'integerOnly'=>true),
-			array('package_name, img, name_en, name_ar', 'length', 'max'=>250),
-			array('package_type', 'length', 'max'=>6),
-			array('customer_type', 'length', 'max'=>3),
-			array('desc_en, desc_ar', 'safe'),
+			array('package_name, speed_based, package_type, img, name_en, name_ar, desc_en, desc_ar', 'required'),
+			array('package_name', 'length', 'max' => 250),
+			array('package_type', 'in', 'range' => array('period', 'single', 'device'), 'allowEmpty' => false),
+			array('img', 'file', 'mimeTypes' => 'image/gif, image/png, image/jpeg', 'maxSize' => 1024 * 1024, 'allowEmpty' => true),
 			// The following rule is used by search().
-			// @todo Please remove those attributes that should not be searched.
-			array('product_package_id, package_name, speed_based, package_type, customer_type, img, package_type_id, name_en, name_ar, desc_en, desc_ar, enabled', 'safe', 'on'=>'search'),
+			// Please remove those attributes that should not be searched.
+			array('product_package_id, package_name, speed_based, package_type, package_type_id', 'safe', 'on' => 'search'),
 		);
 	}
 
 	/**
 	 * @return array relational rules.
 	 */
-	public function relations()
-	{
+	public function relations() {
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'products' => array(self::HAS_MANY, 'Product', 'package', 'order' => 'sort ASC')
 		);
 	}
 
 	/**
 	 * @return array customized attribute labels (name=>label)
 	 */
-	public function attributeLabels()
-	{
+	public function attributeLabels() {
 		return array(
 			'product_package_id' => 'Product Package',
 			'package_name' => 'Package Name',
 			'speed_based' => 'Speed Based',
 			'package_type' => 'Package Type',
-			'customer_type' => 'Customer Type',
-			'img' => 'Img',
-			'package_type_id' => 'Package Type',
-			'name_en' => 'Name En',
-			'name_ar' => 'Name Ar',
-			'desc_en' => 'Desc En',
-			'desc_ar' => 'Desc Ar',
-			'enabled' => 'Enabled',
+			'img' => 'Image',
+			'package_type_id' => 'Package Type Id',
+			'name_en' => 'Name EN',
+			'name_ar' => 'Name AR',
+			'desc_en' => 'Desc EN',
+			'desc_ar' => 'Desc AR',
+			'enabled' => 'Enabled'
 		);
 	}
 
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
-	 *
-	 * Typical usecase:
-	 * - Initialize the model fields with values from filter form.
-	 * - Execute this method to get CActiveDataProvider instance which will filter
-	 * models according to data in model fields.
-	 * - Pass data provider to CGridView, CListView or any similar widget.
-	 *
-	 * @return CActiveDataProvider the data provider that can return the models
-	 * based on the search/filter conditions.
+	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
 	 */
-	public function search()
-	{
-		// @todo Please modify the following code to remove attributes that should not be searched.
+	public function search() {
+		// Warning: Please modify the following code to remove attributes that
+		// should not be searched.
 
-		$criteria=new CDbCriteria;
+		$criteria = new CDbCriteria;
 
-		$criteria->compare('product_package_id',$this->product_package_id);
-		$criteria->compare('package_name',$this->package_name,true);
-		$criteria->compare('speed_based',$this->speed_based);
-		$criteria->compare('package_type',$this->package_type,true);
-		$criteria->compare('customer_type',$this->customer_type,true);
-		$criteria->compare('img',$this->img,true);
-		$criteria->compare('package_type_id',$this->package_type_id);
-		$criteria->compare('name_en',$this->name_en,true);
-		$criteria->compare('name_ar',$this->name_ar,true);
-		$criteria->compare('desc_en',$this->desc_en,true);
-		$criteria->compare('desc_ar',$this->desc_ar,true);
-		$criteria->compare('enabled',$this->enabled);
-
+		$criteria->compare('product_package_id', $this->product_package_id);
+		$criteria->compare('package_name', $this->package_name, true);
+		$criteria->compare('speed_based', $this->speed_based, true);
+		$criteria->compare('package_type', $this->package_type, true);
+		$criteria->compare('img', $this->img, true);
+		$criteria->compare('package_type_id', $this->package_type_id, true);
+		$criteria->compare('name_en', $this->name_en);
+		$criteria->compare('name_ar', $this->name_ar);
+		$criteria->compare('desc_en', $this->desc_en);
+		$criteria->compare('desc_ar', $this->desc_ar);
+		$criteria->compare('enabled', $this->enabled);
 		return new CActiveDataProvider($this, array(
-			'criteria'=>$criteria,
-		));
+					'criteria' => $criteria,
+				));
 	}
 
-	/**
-	 * Returns the static model of the specified AR class.
-	 * Please note that you should have this exact method in all your CActiveRecord descendants!
-	 * @param string $className active record class name.
-	 * @return ProductPackage the static model class
-	 */
-	public static function model($className=__CLASS__)
-	{
-		return parent::model($className);
-	}
 }

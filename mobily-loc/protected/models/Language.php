@@ -1,21 +1,23 @@
 <?php
 
 /**
- * This is the model class for table "product_package_type".
+ * This is the model class for table "languages".
  *
- * The followings are the available columns in table 'product_package_type':
- * @property integer $product_package_type_id
- * @property string $package_type_name
- * @property string $customer_type
- * @property string $name_en
- * @property string $name_ar
+ * The followings are the available columns in table 'languages':
+ * @property integer $language_id
+ * @property string $name
+ * @property string $language_code
+ * @property string $direction
+ *
+ * The followings are the available model relations:
+ * @property AttributeValues[] $attributeValues
  */
-class ProductPackageType extends CActiveRecord
+class Language extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return ProductPackageType the static model class
+	 * @return Languages the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -27,7 +29,7 @@ class ProductPackageType extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'product_package_type';
+		return 'language';
 	}
 
 	/**
@@ -38,12 +40,13 @@ class ProductPackageType extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('product_package_type_id, package_type_name, customer_type, name_en, name_ar', 'required'),
-			array('product_package_type_id', 'numerical', 'integerOnly'=>true),
-			array('package_type_name', 'length', 'max'=>150),
+			array('direction', 'required'),
+			array('language_code', 'length', 'max'=>45),
+			array('direction', 'length', 'max'=>3),
+			array('name', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('product_package_type_id, package_type_name, customer_type, name_en, name_ar', 'safe', 'on'=>'search'),
+			array('language_id, name, language_code, direction', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -55,6 +58,7 @@ class ProductPackageType extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'attributeValue' => array(self::HAS_MANY, 'AttributeValue', 'language_id'),
 		);
 	}
 
@@ -64,11 +68,10 @@ class ProductPackageType extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'product_package_type_id' => 'Product Package Type',
-			'package_type_name' => 'Package Type Name',
-			'customer_type' => 'Customer Type',
-			'name_en' => 'Name EN',
-			'name_ar' => 'Name AR',
+			'language_id' => 'Language',
+			'name' => 'Name',
+			'language_code' => 'Language Code',
+			'direction' => 'Direction',
 		);
 	}
 
@@ -83,10 +86,10 @@ class ProductPackageType extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('product_package_type_id',$this->product_package_type_id);
-		$criteria->compare('package_type_name',$this->package_type_name,true);
-		$criteria->compare('name_en',$this->name_en,true);
-		$criteria->compare('name_ar',$this->name_ar,true);
+		$criteria->compare('language_id',$this->language_id);
+		$criteria->compare('name',$this->name,true);
+		$criteria->compare('language_code',$this->language_code,true);
+		$criteria->compare('direction',$this->direction,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
